@@ -2,10 +2,13 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <link rel=stylesheet type=text/css href="/static/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
     </head>
     <body>
-        <div id="map" style="width:100%; height:300px;"></div>
+        <div id="map"></div>
         <h1>Deaths during the L.A. riots</h1>
         <table border=1 cellpadding=7>
             <tr>
@@ -649,786 +652,787 @@
             </tr>
         
         </table>
-        <script type="text/javascript">
-            var map = L.map('map').setView([34.055, -118.35], 9);
-            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
-                subdomains: ['otile1','otile2','otile3','otile4']
-            });
-            map.addLayer(mapquestLayer);
-            var data = {
-              "type": "FeatureCollection",
-              "features": [
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Cesar A. Aguilar",
-                    "id": "1"
+        <script>
+        var map = L.map('map').setView([34.055, -118.35], 9);
+              var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                  maxZoom: 18,
+                  attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                  subdomains: ['otile1','otile2','otile3','otile4']
+              });
+              map.addLayer(mapquestLayer);
+              var data = {
+                "type": "FeatureCollection",
+                "features": [
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Cesar A. Aguilar",
+                      "id": "1"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2739756, 34.0592814]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2739756, 34.0592814]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "George Alvarez",
-                    "id": "2"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "George Alvarez",
+                      "id": "2"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2340982, 34.0626901]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2340982, 34.0626901]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Wilson Alvarez",
-                    "id": "3"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Wilson Alvarez",
+                      "id": "3"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.326816, 33.901662]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.326816, 33.901662]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Brian E. Andrew",
-                    "id": "4"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Brian E. Andrew",
+                      "id": "4"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2153903, 33.9034569]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2153903, 33.9034569]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Vivian Austin",
-                    "id": "5"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Vivian Austin",
+                      "id": "5"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.304741, 33.985667]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.304741, 33.985667]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Franklin Benavidez",
-                    "id": "6"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Franklin Benavidez",
+                      "id": "6"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3088215, 34.0034731]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3088215, 34.0034731]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Carol Benson",
-                    "id": "7"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Carol Benson",
+                      "id": "7"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2805037, 33.98916756]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2805037, 33.98916756]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Patrick Bettan",
-                    "id": "8"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Patrick Bettan",
+                      "id": "8"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.293181, 34.052068]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.293181, 34.052068]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Hector Castro",
-                    "id": "9"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Hector Castro",
+                      "id": "9"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.291654, 34.0587022]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.291654, 34.0587022]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Jerel L. Channell",
-                    "id": "10"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Jerel L. Channell",
+                      "id": "10"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3323783, 34.09129756]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3323783, 34.09129756]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Gregory Davis Jr.",
-                    "id": "11"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Gregory Davis Jr.",
+                      "id": "11"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2915492, 34.005485]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2915492, 34.005485]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "John Doe #80",
-                    "id": "12"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "John Doe #80",
+                      "id": "12"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2914954, 33.98939885]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2914954, 33.98939885]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Harry Doller",
-                    "id": "13"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Harry Doller",
+                      "id": "13"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.278763, 34.08778849]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.278763, 34.08778849]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Kevin J. Edwards",
-                    "id": "14"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Kevin J. Edwards",
+                      "id": "14"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2002522, 33.892421]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2002522, 33.892421]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Howard Epstein",
-                    "id": "15"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Howard Epstein",
+                      "id": "15"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3247424, 33.9890486]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3247424, 33.9890486]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Juana Espinosa",
-                    "id": "16"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Juana Espinosa",
+                      "id": "16"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2461881, 33.9198205]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2461881, 33.9198205]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Kevin A. Evanahen",
-                    "id": "17"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Kevin A. Evanahen",
+                      "id": "17"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.4144533, 33.99267241]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.4144533, 33.99267241]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Jose L. Garcia",
-                    "id": "18"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Jose L. Garcia",
+                      "id": "18"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2070419, 34.0275527]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2070419, 34.0275527]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Mark Garcia",
-                    "id": "19"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Mark Garcia",
+                      "id": "19"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3537656, 33.93895407]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3537656, 33.93895407]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Elias Garcia Rivera",
-                    "id": "20"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Elias Garcia Rivera",
+                      "id": "20"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.4137912, 34.1939342]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.4137912, 34.1939342]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Andreas Garnica",
-                    "id": "21"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Andreas Garnica",
+                      "id": "21"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2818793, 34.0468443]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2818793, 34.0468443]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Meeker Gibson",
-                    "id": "22"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Meeker Gibson",
+                      "id": "22"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-117.7306469, 34.0628458]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-117.7306469, 34.0628458]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Matthew D. Haines",
-                    "id": "23"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Matthew D. Haines",
+                      "id": "23"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.1785114, 33.7898575]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.1785114, 33.7898575]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Jimmie Harris",
-                    "id": "24"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Jimmie Harris",
+                      "id": "24"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2651995, 33.989245]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2651995, 33.989245]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "DeAndre Harrison",
-                    "id": "25"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "DeAndre Harrison",
+                      "id": "25"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2542949, 33.9294721]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2542949, 33.9294721]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Paul D. Horace",
-                    "id": "26"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Paul D. Horace",
+                      "id": "26"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2474139, 34.0217355]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2474139, 34.0217355]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Betty Jackson",
-                    "id": "27"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Betty Jackson",
+                      "id": "27"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2739305, 33.9965216]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2739305, 33.9965216]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Dennis Ray Jackson",
-                    "id": "28"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Dennis Ray Jackson",
+                      "id": "28"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2537567, 33.93229185]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2537567, 33.93229185]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Tranh Lam",
-                    "id": "29"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Tranh Lam",
+                      "id": "29"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2238673, 33.8885943]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2238673, 33.8885943]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Edward Song Lee",
-                    "id": "30"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Edward Song Lee",
+                      "id": "30"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3054392, 34.0689851]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3054392, 34.0689851]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Frank D. Lopez",
-                    "id": "31"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Frank D. Lopez",
+                      "id": "31"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2487649, 34.0264271]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2487649, 34.0264271]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Darnell R. Mallory",
-                    "id": "32"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Darnell R. Mallory",
+                      "id": "32"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3341384, 34.09097156]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3341384, 34.09097156]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Lucie R. Maronian",
-                    "id": "33"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Lucie R. Maronian",
+                      "id": "33"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.1134357, 34.1785051]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.1134357, 34.1785051]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Howard Eugene Martin",
-                    "id": "34"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Howard Eugene Martin",
+                      "id": "34"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.141613, 34.1668637]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.141613, 34.1668637]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Ira F. McCurry",
-                    "id": "35"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Ira F. McCurry",
+                      "id": "35"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.265163, 33.9437558]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.265163, 33.9437558]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Alfred V. Miller",
-                    "id": "36"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Alfred V. Miller",
+                      "id": "36"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3157372, 33.9745911]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3157372, 33.9745911]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Arturo C. Miranda",
-                    "id": "37"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Arturo C. Miranda",
+                      "id": "37"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2543429, 33.9237304]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2543429, 33.9237304]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Suzanne R. Morgan",
-                    "id": "38"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Suzanne R. Morgan",
+                      "id": "38"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2344108, 33.9304917]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2344108, 33.9304917]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Nissar Mustafa",
-                    "id": "39"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Nissar Mustafa",
+                      "id": "39"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3090341, 34.0435539]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3090341, 34.0435539]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Ernest Neal Jr.",
-                    "id": "40"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Ernest Neal Jr.",
+                      "id": "40"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.309006, 33.952709]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.309006, 33.952709]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Anthony Netherly",
-                    "id": "41"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Anthony Netherly",
+                      "id": "41"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2695156, 33.9687806]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2695156, 33.9687806]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Charles W. Orebo",
-                    "id": "42"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Charles W. Orebo",
+                      "id": "42"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2812901, 33.9746575]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2812901, 33.9746575]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Juanita Pettaway",
-                    "id": "43"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Juanita Pettaway",
+                      "id": "43"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3331771, 34.090696]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3331771, 34.090696]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Juan A. Pineda",
-                    "id": "44"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Juan A. Pineda",
+                      "id": "44"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.281326, 34.092221]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.281326, 34.092221]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Hugo G. Ramirez",
-                    "id": "45"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Hugo G. Ramirez",
+                      "id": "45"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-117.997106, 34.070238]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-117.997106, 34.070238]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Aaron Ratinoff",
-                    "id": "46"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Aaron Ratinoff",
+                      "id": "46"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.4431, 34.0286551]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.4431, 34.0286551]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Victor R. Rivas",
-                    "id": "47"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Victor R. Rivas",
+                      "id": "47"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.291583, 34.0472563]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.291583, 34.0472563]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "William Ross",
-                    "id": "48"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "William Ross",
+                      "id": "48"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.291274, 34.05569]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.291274, 34.05569]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Juan V. Salgado",
-                    "id": "49"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Juan V. Salgado",
+                      "id": "49"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2713789, 34.02062153]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2713789, 34.02062153]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Imad Sharaf",
-                    "id": "50"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Imad Sharaf",
+                      "id": "50"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.4717452, 34.27185555]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.4717452, 34.27185555]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Jose Solorzano",
-                    "id": "51"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Jose Solorzano",
+                      "id": "51"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.291755, 34.0908675]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.291755, 34.0908675]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "George A. Sosa",
-                    "id": "52"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "George A. Sosa",
+                      "id": "52"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.22518059, 33.97418]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.22518059, 33.97418]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Anthony J. Taylor",
-                    "id": "53"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Anthony J. Taylor",
+                      "id": "53"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2531966, 33.9314634]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2531966, 33.9314634]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Dwight Taylor",
-                    "id": "54"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Dwight Taylor",
+                      "id": "54"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.292169, 34.004453]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.292169, 34.004453]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "James L. Taylor",
-                    "id": "55"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "James L. Taylor",
+                      "id": "55"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3037557, 34.0982485]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3037557, 34.0982485]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Wallace Tope",
-                    "id": "56"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Wallace Tope",
+                      "id": "56"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3098224, 34.0980819]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3098224, 34.0980819]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Edward Anthony Travens",
-                    "id": "57"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Edward Anthony Travens",
+                      "id": "57"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.4430027, 34.28418731]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.4430027, 34.28418731]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Eduardo C. Vela",
-                    "id": "58"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Eduardo C. Vela",
+                      "id": "58"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3687199, 33.9876036]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3687199, 33.9876036]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Fredrick Ward",
-                    "id": "59"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Fredrick Ward",
+                      "id": "59"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.412778, 34.287098]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.412778, 34.287098]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Louis A. Watson",
-                    "id": "60"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Louis A. Watson",
+                      "id": "60"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.2915566, 34.00524354]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.2915566, 34.00524354]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Elbert O. Wilkins",
-                    "id": "61"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Elbert O. Wilkins",
+                      "id": "61"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3100043, 33.95276731]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3100043, 33.95276731]
-                  }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "John H. Willers",
-                    "id": "62"
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "John H. Willers",
+                      "id": "62"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.46777, 34.263184]
+                    }
                   },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.46777, 34.263184]
+                  
+                  {
+                    "type": "Feature",
+                    "properties": {
+                      "full_name": "Willie Bernard Williams",
+                      "id": "63"
+                    },
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-118.3089517, 33.9823625]
+                    }
                   }
-                },
-                
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "Willie Bernard Williams",
-                    "id": "63"
-                  },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-118.3089517, 33.9823625]
+                  
+                ]
+              };
+              var dataLayer = L.geoJson(data, {
+                  onEachFeature: function(feature, layer) {
+                      layer.bindPopup(
+                          '<a href="' + feature.properties.id + '/">' +
+                              feature.properties.full_name +
+                          '</a>'
+                      );
                   }
-                }
-                
-              ]
-            };
-            var dataLayer = L.geoJson(data, {
-                onEachFeature: function(feature, layer) {
-                    layer.bindPopup(
-                        '<a href="' + feature.properties.id + '/">' +
-                            feature.properties.full_name +
-                        '</a>'
-                    );
-                }
-            });
-            map.addLayer(dataLayer);
+              });
+              map.addLayer(dataLayer);
+
         </script>
     </body>
 </html>

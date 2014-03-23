@@ -1,6 +1,6 @@
 ## Documenting the riots in LA
 
-See live version here: [http://pippinlee.github.io/la-riots/build/index.html]
+See live version here: http://pippinlee.github.io/la-riots/build/index.html
 
 * Leaflet
 * Mapping
