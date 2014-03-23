@@ -13,7 +13,7 @@
             {{ object.race }} {{ object.gender|lower }} died on {{ object.date }}
             in a {{ object.type|lower }} at {{ object.address }} in {{ object.neighborhood }}.
         </h1>
-        <p>{{ object.story }}</p>
+        <p style="margin:0px auto;padding:0;line-height:35px;margin-top:341px;font-family: 'Merriweather', serif;width:700px;">{{ object.story }}</p>
         <script type="text/javascript">
             var map = L.map('map').setView([{{ object.y }}, {{ object.x }}], 16);
             var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
