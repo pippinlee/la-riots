@@ -16,7 +16,10 @@ def index():
 
 @app.route('/<number>/')
 def detail(number):
-    return render_template('detail.html')
+	return render_template('detail.html',
+		object=csv_dict[number],
+	)
+
 
 if __name__ == '__main__':
     app.run(
